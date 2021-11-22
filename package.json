@@ -7,6 +7,7 @@
     "email": "hello@frontegg.com",
     "url": "https://frontegg.com"
   },
+  "license": "MIT",
   "dependencies": {
     "@frontegg/react": "^3.0.21",
     "@testing-library/jest-dom": "^5.11.4",
