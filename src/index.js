@@ -4,15 +4,21 @@ import App from './App';
 import './index.css';
 
 import { FronteggProvider } from '@frontegg/react';
+import {Router} from "react-router-dom";
+import { createBrowserHistory } from "history";
+
+const history = createBrowserHistory();
 
 const contextOptions = {
-    baseUrl: 'https://auth.loudapi.com',
-    clientId: '93447df4-edcc-45e5-8664-9fb8c196cf44'
+    baseUrl: 'https://app-7j5u74t2n7qt.stg.frontegg.com',
+    clientId: '4894ec26-7749-465c-a8a3-4e121dc13222'
 };
 
 ReactDOM.render(
     <FronteggProvider contextOptions={contextOptions} hostedLoginBox={true}>
-        <App />
+        <Router history={history}>
+            <App />
+        </Router>
     </FronteggProvider>,
     document.getElementById('root')
 );
