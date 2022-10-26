@@ -6,12 +6,12 @@ import './index.css';
 import { FronteggProvider } from '@frontegg/react';
 
 const contextOptions = {
-    baseUrl: 'https://samples-demo.frontegg.com',
-    clientId: '2e53360e-517e-4c38-a040-ba0e8639f2c7'
+    baseUrl: 'https://auth.loudapi.com',
+    clientId: '93447df4-edcc-45e5-8664-9fb8c196cf44'
 };
 
 ReactDOM.render(
-    <FronteggProvider contextOptions={contextOptions} hostedLoginBox={true}>
+    <FronteggProvider contextOptions={contextOptions} tracing={true} hostedLoginBox={true} authOptions={{ keepSessionAlive: true }}>
         <App />
     </FronteggProvider>,
     document.getElementById('root')
